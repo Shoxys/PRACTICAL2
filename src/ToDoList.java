@@ -103,7 +103,8 @@ public class ToDoList {
         Scanner scanner = new Scanner(System.in);
         int itemNumber = scanner.nextInt();
         // TODO Now: Set the isDone field of the item at the specified index to true
-        ToDoItem item =
+        ToDoItem chosenItem = user.getToDoItems().get(itemNumber);
+        chosenItem.setIsDone(true);
     }
 
     /**
@@ -115,6 +116,8 @@ public class ToDoList {
         Scanner scanner = new Scanner(System.in);
         int itemNumber = scanner.nextInt();
         // TODO Now: Set the isDone field of the item at the specified index to false
+        ToDoItem chosenItem = user.getToDoItems().get(itemNumber);
+        chosenItem.setIsDone(false);
     }
 
     /**
@@ -126,6 +129,8 @@ public class ToDoList {
         Scanner scanner = new Scanner(System.in);
         int itemNumber = scanner.nextInt();
         // TODO Now: Remove the item at the specified index from the user's to-do items list
+        ToDoItem chosenItem = user.getToDoItems().get(itemNumber);
+        user.removeToDoItems(chosenItem);
     }
 
     /**

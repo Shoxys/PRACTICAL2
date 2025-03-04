@@ -25,6 +25,8 @@ public class User {
         toDoItems.add(item);
     }
 
+    public void removeToDoItems(ToDoItem item) {toDoItems.remove(item);}
+
     /**
      * Gets the username of the user.
      */
