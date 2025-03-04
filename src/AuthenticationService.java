@@ -11,6 +11,10 @@ public class AuthenticationService implements IAuthenticationService {
     // TODO Now: Implement the signUp method to add a new user to the list if the username is not taken and return the user; returns null otherwise
     @Override
     public User signUp(String username, String password) {
+        if (users.isEmpty()) {
+            return null;
+        }
+
         for (User user : users) {
             if (username.equals(user.getUsername())) {
                 return null;

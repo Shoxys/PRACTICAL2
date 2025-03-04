@@ -21,6 +21,10 @@ public class User {
         return toDoItems;
     }
 
+    public void addToDoItems(ToDoItem item) {
+        toDoItems.add(item);
+    }
+
     /**
      * Gets the username of the user.
      */
